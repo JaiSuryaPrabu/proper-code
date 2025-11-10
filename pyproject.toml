@@ -1,0 +1,25 @@
+[project]
+name = "propercode"
+version = "0.1.0"
+description = "Code Agent CLI Tool"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "keyring>=25.6.0",
+    "pathspec>=0.12.1",
+    "pydantic>=2.12.3",
+    "pydantic-ai>=1.6.0",
+    "pydantic-graph>=1.6.0",
+    "pyyaml>=6.0.3",
+    "rich>=14.2.0",
+    "toml>=0.10.2",
+    "typer>=0.20.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.2",
+]
+
+[project.scripts]
+propercode = "propercode.cli:main"
