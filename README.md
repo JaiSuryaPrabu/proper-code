@@ -14,25 +14,37 @@ Propercode is an AI agentic coding CLI tool for your codebase, reasons set by st
 
 
 # Quick Start
+## First time quick steps
 1. Clone / Fork this repo
 ```bash
 git clone https://github.com/JaiSuryaPrabu/propercode.git
 cd propercode
 ```
-2. I prefer to use `uv` for the package manager
-3. Add this command to the terminal `uv sync` to download the dependencies
+2. Add this command to the terminal `uv sync` to download the dependencies
 ```bash
 uv sync
 ```
-4. Run the init command to initialize the agent
+3. Activate your virtual environment 
+```bash
+source .venv/bin/activate # for MacOS and Linux
+.venv\Scripts\activate.bat # for Windows Command Prompt 
+.venv\Scripts\Activate.ps1 # for git bash
+```
+4. Install the `propercode` as command 
+```bash
+uv pip install -e .
+```
+*Now you have installed the Propercode in your system*
+
+5. Run the init command to initialize the agent
 ```bash
 propercode init
 ```
-5. Add the keys to the tool by
+6. Add the keys to the tool by
 ```bash
 propercode keys add
 ```
-6. Run the agent to watch it think, plan and write the code
+7. Run the agent to watch it think, plan and write the code
 ```bash
 propercode run "Write a pydantic model for storing the user data such as name and mail as string"
 ```
