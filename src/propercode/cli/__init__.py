@@ -7,6 +7,8 @@ from .commands.init import app as init_app
 from .commands.keys import app as keys_app
 from .commands.run import app as run_app
 
+from .commands.stats import app as stats_app
+
 app = typer.Typer(name="propercode",help="AI Agentic Coding Tool",rich_markup_mode="markdown",no_args_is_help=True)
 
 @app.callback()
@@ -22,6 +24,7 @@ def main_callback(ctx:typer.Context,help="The specific model to use. Overrides c
 app.add_typer(init_app,name="init")
 app.add_typer(keys_app,name="keys")
 app.add_typer(run_app,name="run")
+app.add_typer(stats_app,name="stats")
 
 def main():
     '''

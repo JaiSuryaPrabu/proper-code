@@ -11,3 +11,5 @@ wheels/
 .ruff_cache/
 .pytest_cache/
 .vscode/
+
+.propercode/

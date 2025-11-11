@@ -8,6 +8,7 @@ from propercode.agents.nodes import CONTEXT_SYSTEM_PROMPT
 from propercode.agents.memory.state import AgentState
 from propercode.agents.nodes.plan import PlanNode
 from propercode.models.agents.node_outputs import ContextNodeOutput
+from propercode.agents.tools.file import read_file,file_tree_structure
 
 @dataclass
 class ContextNode(BaseNode[AgentState,None,str]): # base node tells we need only AgentState as memory and outputs str
@@ -21,7 +22,7 @@ class ContextNode(BaseNode[AgentState,None,str]): # base node tells we need only
         output_type=ContextNodeOutput,
         retries=2,
         model_settings=ModelSettings(temperature=0.0),
-        tools = [],
+        tools = [file_tree_structure,read_file],
         )
     )
 

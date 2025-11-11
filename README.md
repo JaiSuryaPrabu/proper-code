@@ -77,3 +77,10 @@ What's your expected feature for this tool? DM me in X [@__Jaisurya](https://x.c
 *Open Source is the future for great products!*
 - MIT LICENSE
 - Community can come and help this repo by fork it, add your tweaks, PR it and let's push it!
+
+
+# Sneak peak
+Propercode writting `stats` command for itself
+
+![Example 1](assets/example_1.png)
+![Example 2](assets/example_2.png)
